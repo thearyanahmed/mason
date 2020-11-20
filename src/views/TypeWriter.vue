@@ -1,8 +1,8 @@
 <template>
     <div class="w-1/2 mx-auto">
 
-        <p class="font-light text-3xl">Editor</p>
-        <Editor :editor="editorData" @upload="handleUpload" @dispatched-editor-data="setData" />
+        <p class="font-light text-3xl">./Mason Editor</p>
+        <MasonEditor :editor="editorData" @upload="handleUpload" @dispatched-editor-data="setData" />
         <button @click="getJSON" class="p-2 bg-gray-400 rounded text-white mt-2">get data</button>
         <div v-if="jsonData" class="mt-4">
             <p>Save the following to your database.It will be used in the EditorView component.</p>
@@ -15,11 +15,11 @@
 </template>
 
 <script>
-import Editor from '../components/Editor'
+import MasonEditor from '../components/editor/MasonEditor'
 
 export default {
     components: {
-        Editor,
+        MasonEditor,
     },
 
     data() {

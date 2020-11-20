@@ -2,25 +2,28 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import TypeWriter from '../views/TypeWriter.vue'
+import Story from '../views/Story.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    name: 'TypeWriter',
-    path: '/type-writer',
+    name: 'Home',
+    path: '/',
     component: TypeWriter
   },
   {
-    path: '/about',
-    name: 'About',
+    name: 'Story',
+    path: '/story',
+    component: Story,
+
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: function () {
-      return import(/* webpackChunkName: "about" */ '../views/About.vue')
+      return import(/* webpackChunkName: "about" */ '../views/Story.vue')
     }
-  }
+  },
 ]
 
 const router = new VueRouter({
