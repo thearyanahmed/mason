@@ -1,9 +1,16 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+import TypeWriter from '../views/TypeWriter.vue'
+
 Vue.use(VueRouter)
 
 const routes = [
+  {
+    name: 'TypeWriter',
+    path: '/type-writer',
+    component: TypeWriter
+  },
   {
     path: '/about',
     name: 'About',
